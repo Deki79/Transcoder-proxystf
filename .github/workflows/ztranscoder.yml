@@ -1,5 +1,5 @@
 name: ztranscoder
- 
+
 on:
   workflow_dispatch:
     inputs:
@@ -21,7 +21,7 @@ on:
           - ASTC_RGBA_4x4
           - ASTC_RGBA_6x6
           - ASTC_RGBA_8x8
-  
+
 permissions:
   contents: write
 
@@ -126,4 +126,3 @@ jobs:
           gh release upload "${{ inputs.release_tag }}" done.marker \
             --repo "${{ github.repository }}" \
             --clobber
-
